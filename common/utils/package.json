@@ -1,6 +1,6 @@
 {
   "name": "@chu-xin/utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "📦📦📦 chuxin npm 仓库源码 https://www.npmjs.com/settings/chu-xin/packages",
   "main": "dist/utils.cjs.js",
   "module": "dist/utils.es.js",

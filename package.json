@@ -1,7 +1,7 @@
 {
   "name": "chu-xin",
   "version": "1.0.0",
-  "description": "📦📦📦 个人 npm 仓库源码 https://www.npmjs.com/settings/chu-xin/packages",
+  "description": "",
   "private": "true",
   "scripts": {
     "test": ""
@@ -12,5 +12,8 @@
     "chu-xin"
   ],
   "author": "chuxin",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^6.0.1"
+  }
 }
