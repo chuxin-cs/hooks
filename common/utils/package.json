@@ -1,13 +1,27 @@
 {
   "name": "@chu-xin/utils",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "📦📦📦 chuxin npm 仓库源码 https://www.npmjs.com/settings/chu-xin/packages",
+  "main": "dist/utils.cjs.js",
+  "module": "dist/utils.es.js",
+  "browser": "dist/utils.umd.js",
   "scripts": {
-    "test": ""
+    "dev": "rimraf dist && rollup -wc",
+    "build": "rimraf dist && rollup -c"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chuxin-cs/chu-xin.git",
+    "directory": "common/utils"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "bugs": {
+    "url": "https://github.com/chuxin-cs/chu-xin/issues"
+  },
+  "homepage": "https://github.com/chuxin-cs/chu-xin/tree/master/common/utils#readme",
+  "author": "chuxin",
   "license": "ISC",
   "dependencies": {
     "rollup": "^4.34.6"
