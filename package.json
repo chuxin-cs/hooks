@@ -4,7 +4,9 @@
   "description": "",
   "private": "true",
   "scripts": {
-    "test": ""
+    "utils:dev": "pnpm -F utils dev",
+    "utils:build": "pnpm -F utils build",
+    "utils:publish": "pnpm -F utils publish"
   },
   "keywords": [
     "chuxin",
