@@ -1,0 +1,20 @@
+{
+  "name": "@chu-xin/utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rollup": "^4.34.6"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.7",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.2"
+  }
+}
