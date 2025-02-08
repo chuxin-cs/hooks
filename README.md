@@ -1,2 +1,2 @@
 # chuxin-cs 的个人 npm 仓库
-[![npm](https://img.shields.io/npm/v/chuxin-cs.svg)](https://www.npmjs.com/settings/chu-xin/packages)
+[个人地址](https://www.npmjs.com/settings/chu-xin/packages)

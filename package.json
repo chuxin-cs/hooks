@@ -1,0 +1,16 @@
+{
+  "name": "chu-xin",
+  "version": "1.0.0",
+  "description": "📦📦📦 个人 npm 仓库源码 https://www.npmjs.com/settings/chu-xin/packages",
+  "private": "true",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "chuxin",
+    "chuxin-cs",
+    "chu-xin"
+  ],
+  "author": "chuxin",
+  "license": "ISC"
+}
