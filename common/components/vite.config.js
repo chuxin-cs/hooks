@@ -23,7 +23,6 @@ export default defineConfig(() => {
           globals: {
             vue: 'Vue'
           },
-
         }
       },
       // 根据环境控制是否压缩代码 值为 'terser' 或者不配置 minify 就是压缩代码   当我们配置为false则不是压缩代码了
