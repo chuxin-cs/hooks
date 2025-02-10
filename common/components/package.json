@@ -1,12 +1,30 @@
 {
   "name": "@chu-xin/components",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "📦📦📦",
+  "type": "module",
+  "main": "dist/components.cjs.js",
+  "module": "dist/components.es.js",
+  "browser": "dist/components.umd.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "components"
+  ],
+  "author": "chuxin",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.1.0",
+    "vue": "^3.5.13"
+  },
+  "bugs": {
+    "url": "https://github.com/chuxin-cs/chu-xin/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chuxin-cs/chu-xin.git",
+    "directory": "common/utils"
+  }
 }
