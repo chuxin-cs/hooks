@@ -1,8 +1,8 @@
-<script setup lang="ts">
-import {Button} from "@chu-xin/components"
-console.log(Button)
+<script>
+import {Button,Input} from "@chu-xin/components"
 </script>
 
 <template>
+  <Input />
   <Button>button</Button>
 </template>

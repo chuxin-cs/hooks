@@ -12,7 +12,7 @@ importers:
         specifier: workspace:*
         version: link:common/components
       '@chu-xin/utils':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:common/utils
       axios:
         specifier: ^1.7.9

@@ -6,7 +6,12 @@
   "scripts": {
     "utils:dev": "pnpm -F utils dev",
     "utils:build": "pnpm -F utils build",
-    "utils:publish": "pnpm -F utils publish"
+    "utils:publish": "pnpm -F utils publish",
+    "components:dev": "pnpm -F components dev",
+    "components:build": "pnpm -F components build",
+    "components:publish": "pnpm -F components publish",
+    "vue:dev": "pnpm -F vue-app dev",
+    "vue:build": "pnpm -F vue-app build"
   },
   "keywords": [
     "chuxin",

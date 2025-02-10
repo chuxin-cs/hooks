@@ -1,7 +1,7 @@
 <template>
   <div class="cx-button-container">
     <button>
-      <slot></slot>
+      <slot />
     </button>
   </div>
 </template>
@@ -11,7 +11,6 @@ export default {
   name:"Button"
 }
 </script>
-
 
 <style scoped>
 .cx-button-container{
