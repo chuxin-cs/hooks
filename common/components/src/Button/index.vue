@@ -1,10 +1,14 @@
 <template>
-  <div class="cx-button-container"></div>
+  <div class="cx-button-container">
+    <button>
+      <slot></slot>
+    </button>
+  </div>
 </template>
 
 <script>
 export default {
-  name:"CButton"
+  name:"Button"
 }
 </script>
 

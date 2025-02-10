@@ -16,11 +16,16 @@
   "author": "chuxin",
   "license": "ISC",
   "devDependencies": {
-    "rimraf": "^6.0.1",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
+    "rimraf": "^6.0.1",
     "typescript": "~5.7.2",
     "vite": "^6.1.0",
     "vue-tsc": "^2.2.0"
+  },
+  "dependencies": {
+    "@chu-xin/components": "workspace:*",
+    "@chu-xin/utils": "workspace:*",
+    "axios": "^1.7.9"
   }
 }
