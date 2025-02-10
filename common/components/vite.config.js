@@ -5,11 +5,13 @@ export default defineConfig(() => {
   return {
     plugins: [vue()],
     build: {
+      // 为了方便调试我开启了sourcemap
+      sourcemap: true,
       // lib 打包
       lib: {
         entry: 'src/index.js',
         name: 'named',
-        formats: ['es', 'umd'],
+        formats: ['es', 'umd', 'cjs'],
         fileName: (format) => `components.${format}.js`
       },
       rollupOptions: {
@@ -24,7 +26,7 @@ export default defineConfig(() => {
 
         }
       },
-      // 根据环境控制是否压缩代码
+      // 根据环境控制是否压缩代码 值为 'terser' 或者不配置 minify 就是压缩代码   当我们配置为false则不是压缩代码了
       minify: false
     },
   }
