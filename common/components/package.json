@@ -6,8 +6,17 @@
   "main": "dist/components.cjs.js",
   "module": "dist/components.es.js",
   "browser": "dist/components.umd.js",
+  "exports": {
+    "./dist/index.css": "./dist/components.css",
+    "./index.css": "./dist/components.css",
+    ".": {
+      "import": "./dist/components.es.js",
+      "require": "./dist/components.cjs.js"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build"
   },
   "keywords": [
     "components"
