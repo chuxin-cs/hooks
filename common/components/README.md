@@ -1,5 +1,5 @@
 # @chu-xin/components
-chuxin is Business Component Library（个人业务组件沉淀）
+chuxin is Vue Business Component Library（个人业务组件沉淀）
 
 # 📦Install
 
