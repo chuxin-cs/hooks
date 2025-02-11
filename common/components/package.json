@@ -19,7 +19,9 @@
     "build": "vite build"
   },
   "keywords": [
-    "components"
+    "components",
+    "vue ui",
+    "ui"
   ],
   "author": "chuxin",
   "license": "ISC",
