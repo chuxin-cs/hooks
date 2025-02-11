@@ -1,6 +1,6 @@
 {
   "name": "@chu-xin/components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "📦📦📦 chuxin is Business Component Library（个人业务组件沉淀）",
   "type": "module",
   "main": "dist/components.cjs.js",
@@ -35,5 +35,10 @@
     "type": "git",
     "url": "git+https://github.com/chuxin-cs/chu-xin.git",
     "directory": "common/utils"
-  }
+  },
+  "files": [
+    "dist/*.js",
+    "package.json",
+    "README.md"
+  ]
 }
