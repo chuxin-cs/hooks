@@ -1,20 +1,15 @@
-# ⚡ 简介
+# @chu-xin/utils
+chuxin is utils Library
 
-chuxin utils
+# 📦Install
 
-# 🚀 开发
+```bash
+npm i @chu-xin/utils
+```
 
-```shell
-# 配置
-2. node 版本 16+
-3. pnpm 版本 8.x
+# 🦄 Usage
+```javascript
+import {subtract} from "@chu-xin/utils"
 
-# 克隆项目
-git clone https://github.com/chuxin-cs/chu-xin
-
-# 进入项目目录
-cd chu-xin
-
-# 安装依赖
-pnpm i
+console.log(subtract(5,3))
 ```

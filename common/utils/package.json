@@ -1,7 +1,7 @@
 {
   "name": "@chu-xin/utils",
-  "version": "1.0.1",
-  "description": "📦📦📦 chuxin npm 仓库源码 https://www.npmjs.com/settings/chu-xin/packages",
+  "version": "1.0.2",
+  "description": "📦📦📦 chuxin is utils Library",
   "main": "dist/utils.cjs.js",
   "module": "dist/utils.es.js",
   "browser": "dist/utils.umd.js",
@@ -15,7 +15,8 @@
     "directory": "common/utils"
   },
   "keywords": [
-    "utils"
+    "utils",
+    "util"
   ],
   "bugs": {
     "url": "https://github.com/chuxin-cs/chu-xin/issues"
@@ -30,5 +31,10 @@
     "@babel/preset-env": "^7.26.7",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.2"
-  }
+  },
+  "files": [
+    "dist/*.js",
+    "package.json",
+    "README.md"
+  ]
 }
