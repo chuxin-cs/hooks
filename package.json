@@ -10,8 +10,12 @@
     "components:dev": "pnpm -F components dev",
     "components:build": "pnpm -F components build",
     "components:publish": "pnpm -F components publish",
+    "main:dev": "pnpm -F main dev",
+    "main:build": "pnpm -F main build",
     "vue:dev": "pnpm -F vue-app dev",
-    "vue:build": "pnpm -F vue-app build"
+    "vue:build": "pnpm -F vue-app build",
+    "react:dev": "pnpm -F react-app dev",
+    "react:build": "pnpm -F react-app build"
   },
   "keywords": [
     "chuxin",
@@ -21,6 +25,7 @@
   "author": "chuxin",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^22.13.1",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
     "rimraf": "^6.0.1",
@@ -31,6 +36,9 @@
   "dependencies": {
     "@chu-xin/components": "workspace:*",
     "@chu-xin/utils": "workspace:*",
-    "axios": "^1.7.9"
+    "axios": "^1.7.9",
+    "pinia": "^2.3.1",
+    "qiankun": "^2.10.16",
+    "vue-router": "^4.5.0"
   }
 }
