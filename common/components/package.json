@@ -1,7 +1,7 @@
 {
   "name": "@chu-xin/components",
   "version": "1.0.1",
-  "description": "📦📦📦",
+  "description": "📦📦📦 chuxin is Business Component Library（个人业务组件沉淀）",
   "type": "module",
   "main": "dist/components.cjs.js",
   "module": "dist/components.es.js",
