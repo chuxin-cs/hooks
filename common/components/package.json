@@ -1,6 +1,6 @@
 {
   "name": "@chu-xin/components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "📦📦📦 chuxin is Business Component Library",
   "type": "module",
   "main": "dist/vui.cjs.js",
