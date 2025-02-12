@@ -28,7 +28,9 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
     "vite": "^6.1.0",
-    "vue": "^3.5.13"
+    "vue": "^3.5.13",
+    "xgplayer": "^2.18.2",
+    "xgplayer-flv.js": "2.2.1"
   },
   "bugs": {
     "url": "https://github.com/chuxin-cs/chu-xin/issues"

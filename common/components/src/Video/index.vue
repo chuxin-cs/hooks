@@ -7,13 +7,13 @@
       :style="`background-image:url(${videoEmptyImg})`"></div>
     <template v-else-if="!deviceErrorContent && !firstFrameAcquired&&!emptyVideo">
       <template v-if="isLoaderLib&&url">
-        <HslVideo v-if="videoType==='hls'" ref="video" v-bind="attrs" v-on="$listeners" :src="videoUrl"
+        <HslVideo v-if="videoType==='hls'" ref="video" v-bind="attrs"  :src="videoUrl"
           :acc-status="accStatus" @timeupdate="timeupdateHandle" @play="playHandle" />
-        <FlashVideo v-else-if="videoType==='flash'" ref="video" v-bind="attrs" v-on="$listeners" :src="videoUrl"
+        <FlashVideo v-else-if="videoType==='flash'" ref="video" v-bind="attrs" :src="videoUrl"
           :acc-status="accStatus" @timeupdate="timeupdateHandle" @play="playHandle" />
-        <DefaultVideo v-else ref="video" v-bind="attrs" v-on="$listeners" :src="videoUrl" :acc-status="accStatus"
+        <DefaultVideo v-else ref="video" v-bind="attrs"  :src="videoUrl" :acc-status="accStatus"
           @timeupdate="timeupdateHandle" @play="playHandle" />
-        <div class="app-components-video-mask" v-if="$listeners.click" @click="click"></div>
+        <div class="app-components-video-mask" v-if="$attrs.click" @click="click"></div>
       </template>
       <span v-if="loading" v-html="loadingHtml"></span>
     </template>
@@ -23,21 +23,26 @@
     <canvas height="0" width="0" ref="canvas" v-show="firstFrameAcquired" v-if="firstFrame"></canvas>
   </div>
 </template>
+
 <script>
-import HslVideo from './hls';
-import FlashVideo from './flash';
-import DefaultVideo from './default';
-import loader from '@/base/utils/loader';
+// 组件
+import HslVideo from './hls.vue';
+import FlashVideo from './flash.vue';
+import DefaultVideo from './default.vue';
+// service
+import Player from 'xgplayer';
+import FlvJsPlayer from 'xgplayer-flv.js';
 import posterConfig from './config/poster';
 import errorConfig from './config/error';
 import { createPosterHtml } from './config/poster';
 import { createErrorEl } from './config/error';
-import videoEmptyImg from './assets/video-empty.png';
 import DeviceStatusMixin from './mixins/device-status';
+import videoEmptyImg from './assets/video-empty.png';
 
 const loadingHtml = createPosterHtml();
 const errorHtml = createErrorEl().outerHTML;
 export default {
+  name: "video",
   inheritAttrs: false,
   components: { HslVideo, FlashVideo, DefaultVideo },
   mixins: [DeviceStatusMixin],
@@ -97,16 +102,18 @@ export default {
     if (
       window.FlvJsPlayer &&
       window.Player &&
-      window.HlsJsPlayer &&
+      // window.HlsJsPlayer &&
       window.VideoLibLoaded
     ) return this.isLoaderLib = true;
-    loader('xgplayer').then(() => loader(['xgplayer-flv', 'xgplayer-hls'])).then(() => {
+    this.$nextTick(() => {
+      window.Player = Player;
+      window.FlvJsPlayer = FlvJsPlayer;
       posterConfig(window.Player);
       errorConfig(window.Player);
       this.isLoaderLib = true;
       if (!window.VideoLibLoaded) this.$emit('videoLibLoaded');
       window.VideoLibLoaded = true;
-    });
+    })
   },
   watch: {
     src() {
