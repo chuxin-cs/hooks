@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>video</title>
+  <script src="./js/vui.umd.js"></script>
+  <script src="./js/vue.global.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <Video width="300px" heigh="300px" :controls="false" :src="url" />
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    const { Video, Button } = window.named;
+    // 创建 Vue 3 应用实例
+    const app = createApp({
+      components: { Video, Button },
+      data() {
+        return {
+          url: `https://cxvideo5.123cx.com/live/040092661084-1.flv?deviceNo=e3bac9f0-a579-11ef-abfc-fbf261f0d646&dataType=0&streamType=1&token=b74b7188-b7e5-49b3-a017-7cf0c3142bc8`
+        }
+      }
+    });
+    setTimeout(() => {
+      console.log(Video)
+      app.mount('#app');
+    }, 1000);
+  </script>
+</body>
+
+</html>
