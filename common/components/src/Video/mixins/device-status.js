@@ -1,8 +1,7 @@
 /**
  * 开启视频通道功能
  */
-import {queryOnlineAndACC, queryOnlineAndACCByStation} from '../service';
-import fetch from 'src/base/utils/fetch';
+import Axios from 'axios';
 
 const getParamsFromUrl = (src) => {
   if (!src) {
@@ -68,7 +67,6 @@ export default {
         this.$nextTick(() => {
           this.switching = false;
         });
-        this.queryStatus();
         switch (this.connetMethod) {
           case 'http-dynamic': {
             this.doHttpDynamic();
@@ -80,7 +78,8 @@ export default {
   methods: {
     doHttpDynamic() {
       if (this.src) {
-        fetch(this.src).then(({result, data, resultDesc}) => {
+        Axios(this.src).then((res) => {
+          const {result, data, resultDesc} = res || {};
           if (result) {
             this.url = data;
           } else {
@@ -89,44 +88,6 @@ export default {
         }).catch((err) => {
           console.error(err);
           this.$Message.error('获取视频播放地址失败');
-        });
-      }
-    },
-    queryStatus() {
-      const plateNumber = this.getVideoPlateNumber?.();
-      const deviceId = plateNumber || this.getVideoDeviceId?.();
-      if (deviceId) {
-        this.deviceErrorContent = null;
-        this.eventName = `itbus.video.device_${deviceId}`;
-        window.addEventListener(this.eventName, this.statusHandler);
-        const errMsg = window.__itbus__video_device_status?.[deviceId];
-        if (errMsg) {
-          if (typeof errMsg === 'string') {
-            this.deviceErrorContent = errMsg;
-          }
-          return;
-        } else {
-          window.__itbus__video_device_status = {
-            ...window.__itbus__video_device_status,
-            [deviceId]: true,
-          };
-        }
-        this.accLoading = true;
-        const fetchData = plateNumber ? queryOnlineAndACC : queryOnlineAndACCByStation;
-        fetchData({
-          'plateNumber': plateNumber,
-          'iotDeviceId': deviceId, // iot设备id
-        }).then(({data}) => {
-        // {onlineStatus: 'false' 离线，'true' 在线, accStatus: '1' 开启， '0' 关闭}
-          this.accStatus = data?.accStatus ?? this.accStatus;
-          let msg = null;
-          if (data?.onlineStatus !== 'true') {
-            msg = '当前设备处于离线状态，无法查看视频';
-          }
-          window.__itbus__video_device_status[deviceId] = msg;
-          window.dispatchEvent(new CustomEvent(this.eventName, {detail: {...data, msg, deviceNo: deviceId}}));
-        }).finally(() => {
-          this.accLoading = false;
         });
       }
     },
