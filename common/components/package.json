@@ -3,15 +3,15 @@
   "version": "1.0.2",
   "description": "📦📦📦 chuxin is Business Component Library",
   "type": "module",
-  "main": "dist/components.cjs.js",
-  "module": "dist/components.es.js",
-  "browser": "dist/components.umd.js",
+  "main": "dist/vui.cjs.js",
+  "module": "dist/vui.es.js",
+  "browser": "dist/vui.umd.js",
   "exports": {
     "./dist/index.css": "./dist/components.css",
     "./index.css": "./dist/components.css",
     ".": {
-      "import": "./dist/components.es.js",
-      "require": "./dist/components.cjs.js"
+      "import": "./dist/vui.es.js",
+      "require": "./dist/vui.cjs.js"
     }
   },
   "scripts": {
