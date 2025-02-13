@@ -1,5 +1,7 @@
 <template>
   <div>
+    <router-view></router-view>
+    
     <Input />
     <Button>button</Button>
     <Video width="300px" heigh="300px" :controls="false" :src="flvSrc" />

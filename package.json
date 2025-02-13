@@ -39,7 +39,6 @@
     "@chu-xin/utils": "workspace:*",
     "axios": "^1.7.9",
     "pinia": "^2.3.1",
-    "qiankun": "^2.10.16",
     "vue-router": "^4.5.0"
   }
 }
