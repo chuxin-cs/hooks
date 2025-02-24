@@ -1,19 +1,25 @@
 {
-  "name": "chu-xin",
+  "name": "@qiaojun/vue-hooks",
   "version": "1.0.0",
   "description": "",
-  "private": "true",
-  "scripts": {},
-  "keywords": [],
-  "author": "chuxin",
-  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean  && vue-tsc --noEmit && vite build"
+  },
   "devDependencies": {
-    "@types/node": "^22.13.1",
-    "@vitejs/plugin-vue": "^5.2.1",
-    "@vue/tsconfig": "^0.7.0",
+    "@types/node": "^22.13.5",
+    "execa": "^9.5.2",
     "rimraf": "^6.0.1",
-    "typescript": "~5.7.2",
-    "vite": "^6.1.0",
-    "vue-tsc": "^2.2.0"
-  }
+    "typescript": "^5.7.3",
+    "vite": "^6.1.1",
+    "vue-tsc": "^2.2.4"
+  },
+  "keywords": [
+    "vue-hooks",
+    "v-hooks",
+    "hooks"
+  ],
+  "author": "",
+  "license": "ISC"
 }
