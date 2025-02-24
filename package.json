@@ -3,25 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "private": "true",
-  "scripts": {
-    "utils:dev": "pnpm -F utils dev",
-    "utils:build": "pnpm -F utils build",
-    "utils:publish": "pnpm -F utils publish",
-    "components:dev": "pnpm -F components dev",
-    "components:build": "pnpm -F components build",
-    "components:publish": "pnpm -F components publish",
-    "main:dev": "pnpm -F main dev",
-    "main:build": "pnpm -F main build",
-    "vue:dev": "pnpm -F vue-app dev",
-    "vue:build": "pnpm -F vue-app build",
-    "react:dev": "pnpm -F react-app dev",
-    "react:build": "pnpm -F react-app build"
-  },
-  "keywords": [
-    "chuxin",
-    "chuxin-cs",
-    "chu-xin"
-  ],
+  "scripts": {},
+  "keywords": [],
   "author": "chuxin",
   "license": "ISC",
   "devDependencies": {
@@ -29,16 +12,8 @@
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
     "rimraf": "^6.0.1",
-    "sass": "^1.84.0",
     "typescript": "~5.7.2",
     "vite": "^6.1.0",
     "vue-tsc": "^2.2.0"
-  },
-  "dependencies": {
-    "@chu-xin/components": "workspace:*",
-    "@chu-xin/utils": "workspace:*",
-    "axios": "^1.7.9",
-    "pinia": "^2.3.1",
-    "vue-router": "^4.5.0"
   }
 }
